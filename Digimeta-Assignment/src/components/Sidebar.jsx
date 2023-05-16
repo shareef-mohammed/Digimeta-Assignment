@@ -23,7 +23,7 @@ const Sidebar = ({
   onUnfold,
   fold,
 }) => {
-  const [dashboard, setDashboard] = useState(false);
+  const [dashboard, setDashboard] = useState(true);
   const [form, setForm] = useState(false);
   const [list, setList] = useState(false);
   const [profile, setProfile] = useState(false);

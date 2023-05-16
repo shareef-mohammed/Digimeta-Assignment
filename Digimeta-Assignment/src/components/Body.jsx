@@ -3,7 +3,7 @@ import Sidebar from './Sidebar'
 import Analysis from './Analysis/Analysis';
 
 const Body = () => {
-    const [analysis, setAnalysis] = useState(false);
+    const [analysis, setAnalysis] = useState(true);
     const [monitor, setMonitor] = useState(false);
     const [workplace, setWorkplace] = useState(false);
     const [fold, setFold] = useState(false)
