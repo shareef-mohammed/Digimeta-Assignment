@@ -12,6 +12,7 @@ import {
   AiOutlineUser,
   AiOutlineWarning,
   AiOutlineHighlight,
+  AiOutlineCloseSquare
 } from "react-icons/ai";
 
 const Sidebar = ({
@@ -22,6 +23,8 @@ const Sidebar = ({
   onFold,
   onUnfold,
   fold,
+  sideBar,
+  onClose
 }) => {
   const [dashboard, setDashboard] = useState(true);
   const [form, setForm] = useState(false);
@@ -34,8 +37,9 @@ const Sidebar = ({
   const [searchList, setSearchList] = useState(false);
 
   return (
-    <div
-      className={`fixed  top-0 left-0 h-screen z-[-10] overflow-y-scroll scrollbar-hide shadow-2xl ${
+    <>
+      <div
+      className={`hidden md:block fixed  top-0 left-0 h-screen z-[-10] overflow-y-scroll scrollbar-hide shadow-2xl ${
         fold ? "w-[8%]" : "w-[8%]  md:w-[15%]"
       }`}
     >
@@ -52,17 +56,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineDashboard />
-          {!fold && <p className="pl-2  hidden md:block">Dashboard</p>}
+          {!fold && <p className="pl-2  ">Dashboard</p>}
         </p>
         {!fold &&
           (dashboard ? (
-            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+            <AiOutlineUp className="w-3 mr-4 " />
           ) : (
-            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+            <AiOutlineDown className="w-3 mr-4 " />
           ))}
       </span>
       {dashboard && (
-        <span className="w-full text-sm  hidden md:block">
+        <span className="w-full text-sm  ">
           <p
             className={`pl-8 py-3 cursor-pointer hover:text-blue-500 mb-2 ${
               analysis &&
@@ -105,17 +109,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineForm />
-          {!fold && <p className="pl-2 hidden md:block">Form</p>}
+          {!fold && <p className="pl-2 ">Form</p>}
         </p>
         {!fold &&
           (form ? (
-            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+            <AiOutlineUp className="w-3 mr-4 " />
           ) : (
-            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+            <AiOutlineDown className="w-3 mr-4 " />
           ))}
       </span>
       {form && (
-        <span className="w-full text-sm hidden md:block">
+        <span className="w-full text-sm ">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Basic Form
           </p>
@@ -141,32 +145,32 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineTable />
-          {!fold && <p className="pl-2 hidden md:block">List</p>}
+          {!fold && <p className="pl-2 ">List</p>}
         </p>
         {!fold &&
           (list ? (
-            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+            <AiOutlineUp className="w-3 mr-4 " />
           ) : (
-            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+            <AiOutlineDown className="w-3 mr-4 " />
           ))}
       </span>
       {list && (
-        <span className="w-full text-sm hidden md:block">
+        <span className="w-full text-sm ">
           <span
             className="flex mt-7 text-sm items-center justify-between hover:text-blue-500 cursor-pointer "
             onClick={() => setSearchList(!searchList)}
           >
-            <p className={`pl-8 hidden md:block ${searchList && "text-blue-500"}`}>
+            <p className={`pl-8  ${searchList && "text-blue-500"}`}>
               Search List
             </p>
             {searchList ? (
-              <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+              <AiOutlineUp className="w-3 mr-4 " />
             ) : (
-              <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+              <AiOutlineDown className="w-3 mr-4 " />
             )}
           </span>
           {searchList && (
-            <span className="text-sm w-full hidden md:block">
+            <span className="text-sm w-full ">
               <p className="pl-12 overflow-hidden pt-7 hover:text-blue-500 cursor-pointer">
                 Search List(Articles)
               </p>
@@ -203,17 +207,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineProfile />
-          {!fold && <p className="pl-2 hidden md:block">Profile</p>}
+          {!fold && <p className="pl-2 ">Profile</p>}
         </p>
         {!fold &&
           (profile ? (
-            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+            <AiOutlineUp className="w-3 mr-4 " />
           ) : (
-            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+            <AiOutlineDown className="w-3 mr-4 " />
           ))}
       </span>
       {profile && (
-        <span className="w-full text-sm hidden md:block">
+        <span className="w-full text-sm ">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Basic Profile
           </p>
@@ -236,17 +240,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineCheckCircle />
-          {!fold && <p className="pl-2 hidden md:block">Result</p>}
+          {!fold && <p className="pl-2 ">Result</p>}
         </p>
         {!fold &&
           (result ? (
-            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+            <AiOutlineUp className="w-3 mr-4 " />
           ) : (
-            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+            <AiOutlineDown className="w-3 mr-4 " />
           ))}
       </span>
       {result && (
-        <span className="w-full text-sm hidden md:block">
+        <span className="w-full text-sm ">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Success
           </p>
@@ -269,17 +273,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineWarning />
-          {!fold && <p className="pl-2 hidden md:block">Exception</p>}
+          {!fold && <p className="pl-2 ">Exception</p>}
         </p>
         {!fold &&
           (exception ? (
-            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+            <AiOutlineUp className="w-3 mr-4 " />
           ) : (
-            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+            <AiOutlineDown className="w-3 mr-4 " />
           ))}
       </span>
       {exception && (
-        <span className="w-full text-sm hidden md:block">
+        <span className="w-full text-sm ">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             403
           </p>
@@ -305,17 +309,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineUser />
-          {!fold && <p className="pl-2 hidden md:block">Account</p>}
+          {!fold && <p className="pl-2 ">Account</p>}
         </p>
         {!fold &&
           (account ? (
-            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+            <AiOutlineUp className="w-3 mr-4 " />
           ) : (
-            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+            <AiOutlineDown className="w-3 mr-4 " />
           ))}
       </span>
       {account && (
-        <span className="w-full text-sm hidden md:block">
+        <span className="w-full text-sm ">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Account Center
           </p>
@@ -338,17 +342,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineHighlight />
-          {!fold && <p className="pl-2 hidden md:block">Graphic Editor</p>}
+          {!fold && <p className="pl-2 ">Graphic Editor</p>}
         </p>
         {!fold &&
           (graphic ? (
-            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
+            <AiOutlineUp className="w-3 mr-4 " />
           ) : (
-            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
+            <AiOutlineDown className="w-3 mr-4 " />
           ))}
       </span>
       {graphic && (
-        <span className="w-full text-sm hidden md:block">
+        <span className="w-full text-sm ">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Flow Editor
           </p>
@@ -371,6 +375,348 @@ const Sidebar = ({
         )}
       </div>
     </div>
+
+
+
+
+
+    {sideBar && <div
+      className={`md:hidden block fixed bg-white top-0 left-0 h-screen overflow-y-scroll scrollbar-hide shadow-2xl z-[100]`}
+    >
+      <AiOutlineCloseSquare className="ml-auto mr-4 mt-4" onClick={onClose}/>
+      <span
+        className="flex justify-between items-center mt-8 hover:text-blue-500 cursor-pointer mb-3"
+        onClick={() => {
+          onUnfold();
+          setDashboard(!dashboard);
+        }}
+      >
+        <p
+          className={`flex items-center font-normal text-sm pl-4 ${
+            dashboard && "text-blue-500"
+          }`}
+        >
+          <AiOutlineDashboard />
+          {!fold && <p className="pl-2  ">Dashboard</p>}
+        </p>
+        {!fold &&
+          (dashboard ? (
+            <AiOutlineUp className="w-3 mr-4 " />
+          ) : (
+            <AiOutlineDown className="w-3 mr-4 " />
+          ))}
+      </span>
+      {dashboard && (
+        <span className="w-full text-sm  ">
+          <p
+            className={`pl-8 py-3 cursor-pointer hover:text-blue-500 mb-2 ${
+              analysis &&
+              "text-blue-500 bg-[#e6f7ff] border-r-4 border-blue-500"
+            }`}
+            onClick={() => changePage("analysis")}
+          >
+            Analysis
+          </p>
+          <p
+            className={`pl-8 py-3 cursor-pointer hover:text-blue-500 mb-2 ${
+              monitor && "text-blue-500 bg-[#e6f7ff] border-r-4 border-blue-500"
+            }`}
+            onClick={() => changePage("monitor")}
+          >
+            Monitor
+          </p>
+          <p
+            className={`pl-8 py-3 cursor-pointer hover:text-blue-500 mb-2 ${
+              workplace &&
+              "text-blue-500 bg-[#e6f7ff] border-r-4 border-blue-500"
+            }`}
+            onClick={() => changePage("workplace")}
+          >
+            Workplace
+          </p>
+        </span>
+      )}
+
+      <span
+        className="flex justify-between items-center mt-7 hover:text-blue-500 cursor-pointer mb-3"
+        onClick={() => {
+          onUnfold();
+          setForm(!form);
+        }}
+      >
+        <p
+          className={`flex items-center font-normal text-sm pl-4  ${
+            form && "text-blue-500"
+          }`}
+        >
+          <AiOutlineForm />
+          {!fold && <p className="pl-2 ">Form</p>}
+        </p>
+        {!fold &&
+          (form ? (
+            <AiOutlineUp className="w-3 mr-4 " />
+          ) : (
+            <AiOutlineDown className="w-3 mr-4 " />
+          ))}
+      </span>
+      {form && (
+        <span className="w-full text-sm ">
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Basic Form
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Step Form
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Advanced Form
+          </p>
+        </span>
+      )}
+
+      <span
+        className="flex justify-between items-center mt-7 hover:text-blue-500 cursor-pointer"
+        onClick={() => {
+          onUnfold();
+          setList(!list);
+        }}
+      >
+        <p
+          className={`flex items-center font-normal text-sm pl-4 ${
+            list && "text-blue-500"
+          }`}
+        >
+          <AiOutlineTable />
+          {!fold && <p className="pl-2 ">List</p>}
+        </p>
+        {!fold &&
+          (list ? (
+            <AiOutlineUp className="w-3 mr-4 " />
+          ) : (
+            <AiOutlineDown className="w-3 mr-4 " />
+          ))}
+      </span>
+      {list && (
+        <span className="w-full text-sm ">
+          <span
+            className="flex mt-7 text-sm items-center justify-between hover:text-blue-500 cursor-pointer "
+            onClick={() => setSearchList(!searchList)}
+          >
+            <p className={`pl-8  ${searchList && "text-blue-500"}`}>
+              Search List
+            </p>
+            {searchList ? (
+              <AiOutlineUp className="w-3 mr-4 " />
+            ) : (
+              <AiOutlineDown className="w-3 mr-4 " />
+            )}
+          </span>
+          {searchList && (
+            <span className="text-sm w-full ">
+              <p className="pl-12 overflow-hidden pt-7 hover:text-blue-500 cursor-pointer">
+                Search List(Articles)
+              </p>
+              <p className="pl-12 overflow-hidden pt-7 hover:text-blue-500 cursor-pointer">
+                Search List(Projects)
+              </p>
+              <p className="pl-12 overflow-hidden pt-7 hover:text-blue-500 cursor-pointer">
+                Search List(Applications)
+              </p>
+            </span>
+          )}
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer">
+            Search Table
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer">
+            Basic List
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer">
+            Card List
+          </p>
+        </span>
+      )}
+
+      <span
+        className="flex justify-between items-center mt-7 hover:text-blue-500 cursor-pointer mb-3"
+        onClick={() => {
+          onUnfold();
+          setProfile(!profile);
+        }}
+      >
+        <p
+          className={`flex items-center font-normal text-sm pl-4 ${
+            profile && "text-blue-500"
+          }`}
+        >
+          <AiOutlineProfile />
+          {!fold && <p className="pl-2 ">Profile</p>}
+        </p>
+        {!fold &&
+          (profile ? (
+            <AiOutlineUp className="w-3 mr-4 " />
+          ) : (
+            <AiOutlineDown className="w-3 mr-4 " />
+          ))}
+      </span>
+      {profile && (
+        <span className="w-full text-sm ">
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Basic Profile
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Advanced Profile
+          </p>
+        </span>
+      )}
+
+      <span
+        className="flex justify-between items-center mt-7 hover:text-blue-500 cursor-pointer mb-3"
+        onClick={() => {
+          onUnfold();
+          setResult(!result);
+        }}
+      >
+        <p
+          className={`flex items-center font-normal text-sm pl-4 ${
+            result && "text-blue-500"
+          }`}
+        >
+          <AiOutlineCheckCircle />
+          {!fold && <p className="pl-2 ">Result</p>}
+        </p>
+        {!fold &&
+          (result ? (
+            <AiOutlineUp className="w-3 mr-4 " />
+          ) : (
+            <AiOutlineDown className="w-3 mr-4 " />
+          ))}
+      </span>
+      {result && (
+        <span className="w-full text-sm ">
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Success
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Fail
+          </p>
+        </span>
+      )}
+
+      <span
+        className="flex justify-between items-center mt-7 hover:text-blue-500 cursor-pointer mb-3"
+        onClick={() => {
+          onUnfold();
+          setException(!exception);
+        }}
+      >
+        <p
+          className={`flex items-center font-normal text-sm pl-4 ${
+            exception && "text-blue-500"
+          }`}
+        >
+          <AiOutlineWarning />
+          {!fold && <p className="pl-2 ">Exception</p>}
+        </p>
+        {!fold &&
+          (exception ? (
+            <AiOutlineUp className="w-3 mr-4 " />
+          ) : (
+            <AiOutlineDown className="w-3 mr-4 " />
+          ))}
+      </span>
+      {exception && (
+        <span className="w-full text-sm ">
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            403
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            404
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            500
+          </p>
+        </span>
+      )}
+
+      <span
+        className="flex justify-between items-center mt-7 hover:text-blue-500 cursor-pointer mb-3"
+        onClick={() => {
+          onUnfold();
+          setAccount(!account);
+        }}
+      >
+        <p
+          className={`flex items-center font-normal text-sm pl-4 ${
+            account && "text-blue-500"
+          }`}
+        >
+          <AiOutlineUser />
+          {!fold && <p className="pl-2 ">Account</p>}
+        </p>
+        {!fold &&
+          (account ? (
+            <AiOutlineUp className="w-3 mr-4 " />
+          ) : (
+            <AiOutlineDown className="w-3 mr-4 " />
+          ))}
+      </span>
+      {account && (
+        <span className="w-full text-sm ">
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Account Center
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Account Settings
+          </p>
+        </span>
+      )}
+
+      <span
+        className="flex justify-between items-center mt-7 hover:text-blue-500 cursor-pointer mb-3"
+        onClick={() => {
+          onUnfold();
+          setGraphic(!graphic);
+        }}
+      >
+        <p
+          className={`flex items-center font-normal text-sm pl-4 ${
+            graphic && "text-blue-500"
+          }`}
+        >
+          <AiOutlineHighlight />
+          {!fold && <p className="pl-2 ">Graphic Editor</p>}
+        </p>
+        {!fold &&
+          (graphic ? (
+            <AiOutlineUp className="w-3 mr-4 " />
+          ) : (
+            <AiOutlineDown className="w-3 mr-4 " />
+          ))}
+      </span>
+      {graphic && (
+        <span className="w-full text-sm ">
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Flow Editor
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Mind Editor
+          </p>
+          <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
+            Koni Editor
+          </p>
+        </span>
+      )}
+      <div className="w-[15%] fixed bottom-6 left-0 bg-wheet z-100">
+        {fold ? (
+          <AiOutlineMenuUnfold
+            className="ml-4 cursor-pointer"
+            onClick={onUnfold}
+          />
+        ) : (
+          <AiOutlineMenuFold className="ml-4 cursor-pointer" onClick={onFold} />
+        )}
+      </div>
+    </div>}
+    </>
   );
 };
 

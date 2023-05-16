@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Sidebar from './Sidebar'
 import Analysis from './Analysis/Analysis';
 
-const Body = () => {
+const Body = ({sideBar, onClose}) => {
     const [analysis, setAnalysis] = useState(true);
     const [monitor, setMonitor] = useState(false);
     const [workplace, setWorkplace] = useState(false);
@@ -36,8 +36,10 @@ const Body = () => {
             onFold={() => setFold(true)}
             onUnfold={() => setFold(false)}
             fold={fold}
+            sideBar={sideBar}
+            onClose={onClose}            
         />
-        {analysis && <Analysis fold={fold}/>}
+        {analysis && <Analysis fold={fold} onClose={onClose} />}
         
     </div>
   )
