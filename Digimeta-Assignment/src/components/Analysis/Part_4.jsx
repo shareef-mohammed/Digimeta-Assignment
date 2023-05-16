@@ -63,7 +63,7 @@ const GraphData = [
 
 const Part_4 = () => {
   return (
-    <div className="w-[97%] mt-[550px] sm:mt-[450px] ml-5 md:mt-4 bg-white mb-4">
+    <div className="w-[97%] mt-[550px] sm:mt-[450px] mx-5 md:mt-4 bg-white mb-4">
       <div className="flex overflow-y-scroll scrollbar-hide">
         {data.map((item) => (
           <ProgressComponent

@@ -383,7 +383,7 @@ const Sidebar = ({
     {sideBar && <div
       className={`md:hidden block fixed bg-white top-0 left-0 h-screen overflow-y-scroll scrollbar-hide shadow-2xl z-[100]`}
     >
-      <AiOutlineCloseSquare className="ml-auto mr-4 mt-4" onClick={onClose}/>
+      <AiOutlineCloseSquare className="ml-auto mr-4 mt-4 hover:text-blue-500" onClick={onClose}/>
       <span
         className="flex justify-between items-center mt-8 hover:text-blue-500 cursor-pointer mb-3"
         onClick={() => {

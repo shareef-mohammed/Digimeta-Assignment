@@ -68,8 +68,8 @@ const Part_2 = () => {
   const [first, setFirst] = useState(true);
   const [second, setSecond] = useState(false);
   return (
-    <div className="w-[97%] ml-5 mt-4 bg-white rounded-sm">
-      <div className="flex w-[97%] justify-between border-b">
+    <div className="w-[97%] mx-5 mt-4 bg-white rounded-sm">
+      <div className="flex w-full justify-between border-b">
         <span className="flex pl-5 pt-5 ">
           <p
             className={`cursor-pointer hover:text-blue-500 ${
@@ -99,7 +99,7 @@ const Part_2 = () => {
           <p className="mr-5 hover:text-blue-500 cursor-pointer">本周</p>
           <p className="mr-5 hover:text-blue-500 cursor-pointer">本月</p>
           <p className="mr-5 hover:text-blue-500 cursor-pointer">本年</p>
-          <div className="mr-2">
+          <div className="">
             <Space direction="vertical" style={{ width: "100%" }}>
               <DatePicker.RangePicker
                 status="primary"
@@ -112,7 +112,7 @@ const Part_2 = () => {
 
       <div className="flex flex-wrap mt-5">
         <div className="w-full md:w-2/3">
-          <ResponsiveContainer width="95%" height={350} >
+          <ResponsiveContainer width="100%" height={350} >
             <BarChart data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
@@ -123,7 +123,7 @@ const Part_2 = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <div className="w-full md:w-1/3 md:ml-0 ml-16">
+        <div className="w-full md:w-1/3 md:ml-0 px-4">
           <p className="text-gray-700">门店销售额排名</p>
           {list.map((item) => (
             <div key={item.id} className="flex text-gray-700 mt-5">

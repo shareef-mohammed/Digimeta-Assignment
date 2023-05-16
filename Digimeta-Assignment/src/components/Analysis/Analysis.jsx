@@ -7,7 +7,7 @@ import Footer from '../Footer'
 
 const Analysis = ({fold, onClose}) => {
   return (
-    <div className={`bg-[#f0f2f5] ${fold ? 'w-[92%] md:w-[92%] md:ml-[8%] ml-[8%]' : 'md:w-[85%] w-[100%] md:ml-[15%]'}`} onClick={onClose}>
+    <div className={`bg-[#f0f2f5] ${fold ? 'w-full md:w-[92%] md:ml-[8%]' : 'md:w-[85%] w-full md:ml-[15%]'}`} onClick={onClose}>
       <Part_1 />
       <Part_2 />
       <Part_3 />

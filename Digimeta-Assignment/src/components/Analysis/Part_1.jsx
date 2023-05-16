@@ -34,7 +34,7 @@ import {
   
   const Part_1 = () => {
   return (
-    <div className="flex flex-wrap ml-2">
+    <div className="flex flex-wrap mx-2">
         <div className="mt-6 mx-3 mb-4 w-full md:w-[46%] lg:w-[23%]  bg-white rounded-sm">
           <span className="flex justify-between px-6 pt-6 pb-1 text-gray-400">
             <p className="text-sm">总销售额</p>
@@ -86,7 +86,7 @@ import {
           <p className="text-sm py-2 pl-6">转化率 60%</p>
         </div>
 
-        <div className="mt-6 mx-1 mb-4 w-full md:w-[46%] lg:w-[23%] bg-white rounded-sm">
+        <div className="mt-6 mx-3 mb-4 w-full md:w-[46%] lg:w-[23%] bg-white rounded-sm">
           <span className="flex justify-between px-6 pt-6 pb-1 text-gray-400">
             <p className="text-sm">运营活动效果</p>
             <AiOutlineInfoCircle />
