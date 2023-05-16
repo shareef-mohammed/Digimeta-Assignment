@@ -36,7 +36,7 @@ const Sidebar = ({
   return (
     <div
       className={`fixed  top-0 left-0 h-screen z-[-10] overflow-y-scroll scrollbar-hide shadow-2xl ${
-        fold ? "w-[7%] md:w-[4%]" : "w-[25%] md:w-[15%]"
+        fold ? "w-[8%]" : "w-[8%]  md:w-[15%]"
       }`}
     >
       <span
@@ -52,17 +52,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineDashboard />
-          {!fold && <p className="pl-2">Dashboard</p>}
+          {!fold && <p className="pl-2  hidden md:block">Dashboard</p>}
         </p>
         {!fold &&
           (dashboard ? (
-            <AiOutlineUp className="w-3 mr-4" />
+            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
           ) : (
-            <AiOutlineDown className="w-3 mr-4" />
+            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
           ))}
       </span>
       {dashboard && (
-        <span className="w-full text-sm">
+        <span className="w-full text-sm  hidden md:block">
           <p
             className={`pl-8 py-3 cursor-pointer hover:text-blue-500 mb-2 ${
               analysis &&
@@ -100,22 +100,22 @@ const Sidebar = ({
         }}
       >
         <p
-          className={`flex items-center font-normal text-sm pl-4 ${
+          className={`flex items-center font-normal text-sm pl-4  ${
             form && "text-blue-500"
           }`}
         >
           <AiOutlineForm />
-          {!fold && <p className="pl-2">Form</p>}
+          {!fold && <p className="pl-2 hidden md:block">Form</p>}
         </p>
         {!fold &&
           (form ? (
-            <AiOutlineUp className="w-3 mr-4" />
+            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
           ) : (
-            <AiOutlineDown className="w-3 mr-4" />
+            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
           ))}
       </span>
       {form && (
-        <span className="w-full text-sm">
+        <span className="w-full text-sm hidden md:block">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Basic Form
           </p>
@@ -141,32 +141,32 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineTable />
-          {!fold && <p className="pl-2">List</p>}
+          {!fold && <p className="pl-2 hidden md:block">List</p>}
         </p>
         {!fold &&
           (list ? (
-            <AiOutlineUp className="w-3 mr-4" />
+            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
           ) : (
-            <AiOutlineDown className="w-3 mr-4" />
+            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
           ))}
       </span>
       {list && (
-        <span className="w-full text-sm">
+        <span className="w-full text-sm hidden md:block">
           <span
-            className="flex mt-7 text-sm items-center justify-between hover:text-blue-500 cursor-pointer"
+            className="flex mt-7 text-sm items-center justify-between hover:text-blue-500 cursor-pointer "
             onClick={() => setSearchList(!searchList)}
           >
-            <p className={`pl-8  ${searchList && "text-blue-500"}`}>
+            <p className={`pl-8 hidden md:block ${searchList && "text-blue-500"}`}>
               Search List
             </p>
             {searchList ? (
-              <AiOutlineUp className="w-3 mr-4" />
+              <AiOutlineUp className="w-3 mr-4 hidden md:block" />
             ) : (
-              <AiOutlineDown className="w-3 mr-4" />
+              <AiOutlineDown className="w-3 mr-4 hidden md:block" />
             )}
           </span>
           {searchList && (
-            <span className="text-sm w-full">
+            <span className="text-sm w-full hidden md:block">
               <p className="pl-12 overflow-hidden pt-7 hover:text-blue-500 cursor-pointer">
                 Search List(Articles)
               </p>
@@ -203,17 +203,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineProfile />
-          {!fold && <p className="pl-2">Profile</p>}
+          {!fold && <p className="pl-2 hidden md:block">Profile</p>}
         </p>
         {!fold &&
           (profile ? (
-            <AiOutlineUp className="w-3 mr-4" />
+            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
           ) : (
-            <AiOutlineDown className="w-3 mr-4" />
+            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
           ))}
       </span>
       {profile && (
-        <span className="w-full text-sm">
+        <span className="w-full text-sm hidden md:block">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Basic Profile
           </p>
@@ -236,17 +236,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineCheckCircle />
-          {!fold && <p className="pl-2">Result</p>}
+          {!fold && <p className="pl-2 hidden md:block">Result</p>}
         </p>
         {!fold &&
           (result ? (
-            <AiOutlineUp className="w-3 mr-4" />
+            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
           ) : (
-            <AiOutlineDown className="w-3 mr-4" />
+            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
           ))}
       </span>
       {result && (
-        <span className="w-full text-sm">
+        <span className="w-full text-sm hidden md:block">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Success
           </p>
@@ -269,17 +269,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineWarning />
-          {!fold && <p className="pl-2">Exception</p>}
+          {!fold && <p className="pl-2 hidden md:block">Exception</p>}
         </p>
         {!fold &&
           (exception ? (
-            <AiOutlineUp className="w-3 mr-4" />
+            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
           ) : (
-            <AiOutlineDown className="w-3 mr-4" />
+            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
           ))}
       </span>
       {exception && (
-        <span className="w-full text-sm">
+        <span className="w-full text-sm hidden md:block">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             403
           </p>
@@ -305,17 +305,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineUser />
-          {!fold && <p className="pl-2">Account</p>}
+          {!fold && <p className="pl-2 hidden md:block">Account</p>}
         </p>
         {!fold &&
           (account ? (
-            <AiOutlineUp className="w-3 mr-4" />
+            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
           ) : (
-            <AiOutlineDown className="w-3 mr-4" />
+            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
           ))}
       </span>
       {account && (
-        <span className="w-full text-sm">
+        <span className="w-full text-sm hidden md:block">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Account Center
           </p>
@@ -338,17 +338,17 @@ const Sidebar = ({
           }`}
         >
           <AiOutlineHighlight />
-          {!fold && <p className="pl-2">Graphic Editor</p>}
+          {!fold && <p className="pl-2 hidden md:block">Graphic Editor</p>}
         </p>
         {!fold &&
           (graphic ? (
-            <AiOutlineUp className="w-3 mr-4" />
+            <AiOutlineUp className="w-3 mr-4 hidden md:block" />
           ) : (
-            <AiOutlineDown className="w-3 mr-4" />
+            <AiOutlineDown className="w-3 mr-4 hidden md:block" />
           ))}
       </span>
       {graphic && (
-        <span className="w-full text-sm">
+        <span className="w-full text-sm hidden md:block">
           <p className="pl-8 pt-7 hover:text-blue-500 cursor-pointer mb-2">
             Flow Editor
           </p>

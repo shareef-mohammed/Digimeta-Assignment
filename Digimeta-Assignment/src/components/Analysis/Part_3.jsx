@@ -121,11 +121,13 @@ const Part_3 = () => {
               <AiFillCaretDown className="text-red-600" />
             </span>
             <span className="">
-              <LineChart width={200} height={70} data={data}>
+              <ResponsiveContainer width="70%" height={70}>
+              <LineChart  data={data}>
                 <CartesianGrid stroke="#f5f5f5" />
                 <Line type="monotone" dataKey="uv" stroke="#3b82f6" />
                 <Tooltip />
               </LineChart>
+              </ResponsiveContainer>
             </span>
           </div>
 
@@ -140,11 +142,13 @@ const Part_3 = () => {
               <AiFillCaretUp className="text-green-600" />
             </span>
             <span className="">
-              <LineChart width={200} height={70} data={data}>
+              <ResponsiveContainer width="70%" height={70} >
+              <LineChart data={data}>
                 <CartesianGrid stroke="#f5f5f5" />
                 <Line type="monotone" dataKey="uv" stroke="#3b82f6" />
                 <Tooltip />
               </LineChart>
+              </ResponsiveContainer>
             </span>
           </div>
         </div>

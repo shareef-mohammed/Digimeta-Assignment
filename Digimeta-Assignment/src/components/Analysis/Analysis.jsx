@@ -7,7 +7,7 @@ import Footer from '../Footer'
 
 const Analysis = ({fold}) => {
   return (
-    <div className={`bg-[#f0f2f5] ${fold ? 'w-[93%] md:w-[96%] md:ml-[4%] ml-[7%]' : 'md:w-[85%] w-[75%] md:ml-[15%] ml-[25%]'}`}>
+    <div className={`bg-[#f0f2f5] ${fold ? 'w-[92%] md:w-[92%] md:ml-[8%] ml-[8%]' : 'md:w-[85%] w-[90%] md:ml-[15%] ml-[8%]'}`}>
       <Part_1 />
       <Part_2 />
       <Part_3 />
