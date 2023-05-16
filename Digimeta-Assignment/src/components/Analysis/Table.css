@@ -1,0 +1,5 @@
+.ant-table-tbody > tr > td {
+    height: 5px; /* Set the desired row height in pixels */
+    line-height: 5px; /* Set the same value as row height for vertical alignment */
+}
+  
