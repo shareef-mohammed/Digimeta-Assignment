@@ -4,7 +4,7 @@ import { AiOutlineGithub, AiOutlineCopyrightCircle } from 'react-icons/ai'
 const Footer = () => {
   return (
     <div className='w-full mt-24 mb-10'>
-        <span className='flex items-center text-gray-500 w-[50%] md:w-[25%] mx-auto justify-between'>
+        <span className='flex items-center text-gray-500 w-[70%] md:w-[25%] mx-auto justify-between'>
             <p>Ant Design Pro</p>
             <AiOutlineGithub />
             <p>Ant Design</p>
