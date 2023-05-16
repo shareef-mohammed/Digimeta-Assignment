@@ -111,7 +111,7 @@ const Part_2 = () => {
       </div>
 
       <div className="flex flex-wrap mt-5">
-        <div className="w-full sm:w-2/3">
+        <div className="w-full md:w-2/3">
           <ResponsiveContainer width="95%" height={350} >
             <BarChart data={data}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -123,7 +123,7 @@ const Part_2 = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <div className="w-full sm:w-1/3">
+        <div className="w-full md:w-1/3 md:ml-0 ml-16">
           <p className="text-gray-700">门店销售额排名</p>
           {list.map((item) => (
             <div key={item.id} className="flex text-gray-700 mt-5">

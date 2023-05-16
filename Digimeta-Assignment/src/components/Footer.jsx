@@ -9,7 +9,7 @@ const Footer = () => {
             <AiOutlineGithub />
             <p>Ant Design</p>
         </span>
-        <span className='flex w-full md:w-[40%] items-center justify-center mx-auto text-gray-500'>
+        <span className='flex w-full md:w-[40%] items-center justify-center text-xs lg:text-normal mx-auto text-gray-500'>
             <AiOutlineCopyrightCircle />
             <p>2023 Produced by Ant Financial Experience Department</p>
         </span>
