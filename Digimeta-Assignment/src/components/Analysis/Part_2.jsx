@@ -68,9 +68,9 @@ const Part_2 = () => {
   const [first, setFirst] = useState(true);
   const [second, setSecond] = useState(false);
   return (
-    <div className="w-[97%] mx-5 mt-4 bg-white rounded-sm">
+    <div className="md:w-[97%] mx-5 mt-2 bg-white rounded-sm">
       <div className="flex w-full justify-between border-b">
-        <span className="flex pl-5 pt-5 ">
+        <span className="flex pl-5 pt-5 text-xs md:text-md">
           <p
             className={`cursor-pointer hover:text-blue-500 ${
               first && "text-blue-500 border-b-2 border-blue-500 pb-5"
@@ -83,7 +83,7 @@ const Part_2 = () => {
             销售额
           </p>
           <p
-            className={`ml-5 cursor-pointer hover:text-blue-500 ${
+            className={`ml-2 md:ml-5 cursor-pointer hover:text-blue-500 ${
               second && "text-blue-500 border-b-2 border-blue-500 pb-5"
             }`}
             onClick={() => {
@@ -94,12 +94,12 @@ const Part_2 = () => {
             访问量
           </p>
         </span>
-        <span className="flex pl-5 pt-5 pb-3 items-center">
-          <p className="mr-5 hover:text-blue-500 cursor-pointer">今日</p>
-          <p className="mr-5 hover:text-blue-500 cursor-pointer">本周</p>
-          <p className="mr-5 hover:text-blue-500 cursor-pointer">本月</p>
-          <p className="mr-5 hover:text-blue-500 cursor-pointer">本年</p>
-          <div className="">
+        <span className="flex px-3 pt-5 pb-3 items-center text-xs md:text-md">
+          <p className="mx-2 hover:text-blue-500 cursor-pointer ">今日</p>
+          <p className="mx-2 hover:text-blue-500 cursor-pointer">本周</p>
+          <p className="mx-2 hover:text-blue-500 cursor-pointer">本月</p>
+          <p className="mx-2 hover:text-blue-500 cursor-pointer">本年</p>
+          <div className="mr-2 pr-3 md:pr-0">
             <Space direction="vertical" style={{ width: "100%" }}>
               <DatePicker.RangePicker
                 status="primary"
@@ -112,7 +112,7 @@ const Part_2 = () => {
 
       <div className="flex flex-wrap mt-5">
         <div className="w-full md:w-2/3">
-          <ResponsiveContainer width="100%" height={350} >
+          <ResponsiveContainer width="90%" height={350} >
             <BarChart data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />

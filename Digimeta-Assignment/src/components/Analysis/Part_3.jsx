@@ -103,7 +103,7 @@ const Part_3 = () => {
   const [second, setSecond] = useState(false);
   const [third, setThird] = useState(false);
   return (
-    <div className=" w-[97%] h-[550px] mx-5 mt-4 flex flex-wrap justify-between ">
+    <div className=" md:w-[97%] mx-5 h-[550px] mt-4 flex flex-wrap justify-between ">
       <div className="w-full md:w-[49%] bg-white rounded-sm ">
         <div className="flex justify-between p-5 border-b">
           <p>线上热门搜索</p>
